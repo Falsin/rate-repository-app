@@ -32,7 +32,7 @@ const theme = {
   },
   card: {
     marginBottom: 5,
-    padding: 5,
+    padding: 10,
 
     avatar: {
       width: 50,
