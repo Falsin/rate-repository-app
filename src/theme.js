@@ -25,8 +25,9 @@ const theme = {
     paddingTop: Constants.statusBarHeight,
 
     appBarTab: {
+      marginRight: 10,
       text: {
-        color: "white"
+        color: "white",
       }
     }
   },
