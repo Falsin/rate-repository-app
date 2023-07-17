@@ -1,16 +1,15 @@
-import { View, Pressable, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import FormikTextInput from "./FormikTextInput";
-import Text from "./Text";
-import theme from "../theme";
+import CustomButton from "./CustomButton";
 
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
+    padding: 20,
     backgroundColor: "white"
   },
   input: {
-    color: theme.text.colors.regular
+    marginBottom: 8
   }
 })
 
@@ -28,9 +27,10 @@ const SignInFormLayout = ({ onSubmit }) => {
         secureTextEntry
         style={styles.input}
       />
-      <Pressable onPress={onSubmit}>
-        <Text>Sign in</Text>
-      </Pressable>
+      <CustomButton
+        title="Sign in"
+        onPress={onSubmit}
+      />
     </View>
   )
 }

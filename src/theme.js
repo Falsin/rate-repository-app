@@ -1,8 +1,10 @@
 import Constants from 'expo-constants';
+import { Platform } from 'react-native';
 
 const theme = {
   colors: {
-    regular: '#ACACAC'
+    regular: '#ACACAC',
+    error: '#d73a4a'
   },
   text: {
     colors: {
@@ -16,7 +18,11 @@ const theme = {
       subheading: 16,
     },
     fonts: {
-      main: 'System',
+      main: Platform.select({
+        android: "Roboto",
+        ios: "Arial",
+        default: "System"
+      })
     },
     fontWeights: {
       normal: '400',
@@ -43,6 +49,20 @@ const theme = {
       width: 50,
       height: 50,
     }
+  },
+  input: {
+    borderWidth: 1,
+    height: 40,
+    borderRadius: 8,
+    borderColor: '#ACACAC',
+    paddingHorizontal: 10
+  },
+  button: {
+    backgroundColor: '#0366d6',
+    height: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8
   }
 };
 

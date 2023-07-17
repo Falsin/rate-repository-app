@@ -1,8 +1,8 @@
 import { Formik } from "formik";
 
-const FormikForm = ({ initialValues, onSubmit, layout }) => {
+const FormikForm = ({ layout, ...props }) => {
   return (
-    <Formik initialValues={initialValues} onSubmit={onSubmit}>
+    <Formik {...props}>
       {({ handleSubmit }) => layout({onSubmit: handleSubmit})}
     </Formik>
   )
